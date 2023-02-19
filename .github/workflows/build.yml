@@ -26,7 +26,7 @@ jobs:
           always() && 
           (github.ref_name == 'dev') && 
           (github.base_ref == 'dev') && 
-          (github.base_ref == 'main') &&
+          (github.base_ref == 'main')
         
       - name: Upload stable ZIP as an artifact
         uses: actions/upload-artifact@v3
@@ -44,5 +44,5 @@ jobs:
           always() && 
           (github.ref_name == 'dev') && 
           (github.base_ref == 'dev') &&
-          (github.base_ref == 'main') &&
+          (github.base_ref == 'main')
           
