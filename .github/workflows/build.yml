@@ -9,13 +9,27 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
         
-      - name: Create ZIP archive
+      - name: Create stable ZIP archive
         run: zip -r "$GITHUB_WORKSPACE/NovaInstaller.zip" ./*
         shell: bash
+        if: github.ref_name == 'main'
         
-      - name: Upload ZIP as an artifact
+      - name: Create nightly ZIP archive
+        run: zip -r "$GITHUB_WORKSPACE/NovaInstaller-nightly.zip" ./*
+        shell: bash
+        if: github.ref_name == 'dev'
+        
+      - name: Upload stable ZIP as an artifact
         uses: actions/upload-artifact@v3
         with:
           name: NovaInstaller
           path: ./NovaInstaller.zip
+        if: github.ref_name == 'main'
+        
+      - name: Upload nightly ZIP as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: NovaInstaller-nightly
+          path: ./NovaInstaller-nightly.zip
+        if: github.ref_name == 'dev'
           
