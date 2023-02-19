@@ -19,7 +19,6 @@ jobs:
         run: |
           git config --global user.name '$GITHUB_TOKEN'
           git config --global user.email '$GITHUB_TOKEN@users.noreply.github.com'
-          git fetch
           git add -A
           git commit -am "Fetch/Update NovaLauncher.apk"
           git push origin $GITHUB_REF_NAME
