@@ -2,10 +2,12 @@ name: Build ZIP file
 on:
   push:
     branches:
-      - '${{ github.ref_name }}'
+      - 'main'
+      - 'dev'
   pull_request:
      branches:
-       - '${{ github.ref_name }}'
+       - 'main'
+       - 'dev'
 jobs:
   build_zip:
     runs-on: ubuntu-latest
