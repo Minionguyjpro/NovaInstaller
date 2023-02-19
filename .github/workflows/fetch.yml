@@ -1,0 +1,25 @@
+name: Fetch .apk
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */5 * * *"
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        
+      - name: Fetch .apk file
+        run: wget https://teslacoilapps.com/tesladirect/download.pl?packageName=com.teslacoilsw.launcher -O ./system/priv-app/NovaLauncher/NovaLauncher.apk
+        
+      - name: Push changes with Git
+        run: |
+          git config --global user.name '$GITHUB_TOKEN'
+          git config --global user.email '$GITHUB_TOKEN@users.noreply.github.com'
+          git fetch
+          git add -A
+          git commit -am "Fetch/Update NovaLauncher.apk"
+          git push origin 
