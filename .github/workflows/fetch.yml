@@ -22,6 +22,4 @@ jobs:
           git init
           git add -A
           git commit -am "Fetch/Update NovaLauncher.apk"
-          git push -u origin $GITHUB_REF_NAME
-          echo Done!
-          exit 0
+          git push -u origin $GITHUB_REF_NAME && echo Done! && exit 0
