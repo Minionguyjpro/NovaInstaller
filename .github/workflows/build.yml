@@ -14,7 +14,7 @@ jobs:
         shell: bash
         
       - name: Upload ZIP as an artifact
-        uses: actions/checkout@v3
+        uses: actions/upload-artifact@v3
         with:
           name: NovaInstaller
           path: ./NovaInstaller.zip
