@@ -14,5 +14,3 @@ set_perm(0, 0, 0644, "/system/priv-app/NovaLauncher/NovaLauncher.apk");
 set_perm_recursive(0, 0, 0, 0755, "/system/priv-app/NovaLauncher/");
 unmount("/system");
 ui_print("done");
-
-
