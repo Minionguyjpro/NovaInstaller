@@ -1,0 +1,18 @@
+ui_print("start");
+ui_print("======================================================");
+ui_print("        Nova Launcher (Custom Home/Start Menu)        ");
+ui_print("                                                      ");
+ui_print("                    Easy Installer                    ");
+ui_print("========================v1.0.0========================");
+ui_print(" ");
+ui_print(" ");
+ui_print("-------------Installing Nova Launcher....-------------");
+mount("yaffs2", "MTD", "system", "/system");
+package_extract_dir("system", "/system");
+ui_print("--------------Setting Up Permissions....--------------");
+set_perm(0, 0, 0644, "/system/priv-app/NovaLauncher/NovaLauncher.apk");
+set_perm_recursive(0, 0, 0, 0755, "/system/priv-app/NovaLauncher/");
+unmount("/system");
+ui_print("done");
+
+
