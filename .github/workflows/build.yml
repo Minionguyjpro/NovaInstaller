@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - '${{ github.ref_name }}'
-   pull_request:
+  pull_request:
      branches:
        - '${{ github.ref_name }}'
 jobs:
