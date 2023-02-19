@@ -29,3 +29,4 @@ jobs:
           git add -A
           git commit -am "Fetch/Update NovaLauncher.apk"
           git push -u origin $GITHUB_REF_NAME && echo Done! && exit 0
+        if: github.ref_type ==! 'pull_request'
