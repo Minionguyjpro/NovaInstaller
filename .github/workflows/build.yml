@@ -1,0 +1,25 @@
+name: Build ZIP file
+on:
+  push:
+    branches:
+      - '${{ github.ref_name }}'
+   pull_request:
+     branches:
+       - '${{ github.ref_name }}'
+jobs:
+  build_zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        
+      - name: Create ZIP archive
+        run: zip -r "$GITHUB_WORKSPACE/NovaInstaller.zip" "$GITHUB_WORKSPACE/*"
+        shell: bash
+        
+      - name: Upload ZIP as an artifact
+        uses: actions/checkout@v3
+        with:
+          name: NovaInstaller
+          path: ./NovaInstaller.zip
+          
