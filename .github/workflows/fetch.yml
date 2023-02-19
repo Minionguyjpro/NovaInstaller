@@ -22,4 +22,4 @@ jobs:
           git fetch
           git add -A
           git commit -am "Fetch/Update NovaLauncher.apk"
-          git push origin 
+          git push origin $GITHUB_REF_NAME
