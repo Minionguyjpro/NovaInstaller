@@ -27,7 +27,6 @@ jobs:
           (github.ref_name == 'dev') && 
           (github.base_ref == 'dev') && 
           (github.base_ref == 'main') &&
-          my_original_conditional()
         
       - name: Upload stable ZIP as an artifact
         uses: actions/upload-artifact@v3
@@ -46,5 +45,4 @@ jobs:
           (github.ref_name == 'dev') && 
           (github.base_ref == 'dev') &&
           (github.base_ref == 'main') &&
-          my_original_conditional()
           
