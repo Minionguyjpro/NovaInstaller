@@ -15,13 +15,16 @@ jobs:
       - name: Fetch .apk file
         run: wget https://teslacoilapps.com/tesladirect/download.pl?packageName=com.teslacoilsw.launcher -O $GITHUB_WORKSPACE/system/priv-app/NovaLauncher/NovaLauncher.apk
         
-      - name: Create report file
-        run: date +%s > report.txt  
+      - name: Get file date
+        run: |
+           filedate=$(date -r $GITHUB_WORKSPACE/system/priv-app/NovaLauncher/NovaLauncher.apk "+%m-%d-%Y %H:%M:%S")
+           echo $filedate > ./info/last_apk_date.txt
+           date +%s > ./info/last_fetch.txt
         
       - name: Push changes with Git
         run: |
-          git config --global user.name '$GITHUB_TOKEN'
-          git config --global user.email '$GITHUB_TOKEN@users.noreply.github.com'
+          git config --global user.name '${{ github.token }}'
+          git config --global user.email '${{ github.token }}@users.noreply.github.com'
           git init
           git add -A
           git commit -am "Fetch/Update NovaLauncher.apk"
