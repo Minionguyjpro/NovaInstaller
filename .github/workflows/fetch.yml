@@ -23,8 +23,8 @@ jobs:
         
       - name: Push changes with Git
         run: |
-          git config --global user.name '${{ github.token }}'
-          git config --global user.email '${{ github.token }}@users.noreply.github.com'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git init
           git add -A
           git commit -am "Fetch/Update NovaLauncher.apk"
