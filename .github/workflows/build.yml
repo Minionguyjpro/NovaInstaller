@@ -23,10 +23,8 @@ jobs:
         run: zip -r "$GITHUB_WORKSPACE/NovaInstaller-nightly.zip" ./*
         shell: bash
         if: |
-          always() && 
-          (github.ref_name == 'dev') && 
-          (github.base_ref == 'dev') && 
-          (github.base_ref == 'main')
+          github.ref_name == 'dev' ||
+          github.event_name == 'pull_request'
         
       - name: Upload stable ZIP as an artifact
         uses: actions/upload-artifact@v3
@@ -41,8 +39,6 @@ jobs:
           name: NovaInstaller-nightly
           path: ./NovaInstaller-nightly.zip
         if: |
-          always() && 
-          (github.ref_name == 'dev') && 
-          (github.base_ref == 'dev') &&
-          (github.base_ref == 'main')
+          github.ref_name == 'dev' ||
+          github.event_name == 'pull_request'
           
