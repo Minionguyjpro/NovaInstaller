@@ -1,7 +1,7 @@
 name: Build ZIP file
 on:
   workflow_run: 
-    workflows: [Fetch .apk]
+    workflows: [fetch]
     types: [completed]
   
 jobs:
