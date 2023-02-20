@@ -1,5 +1,7 @@
 name: Build ZIP file
 on:
+  push:
+  pull_request:
   workflow_run: 
     workflows: 
       - "Fetch .apk"
