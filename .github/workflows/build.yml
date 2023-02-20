@@ -1,7 +1,10 @@
 name: Build ZIP file
 on:
-  push:
-  pull_request:
+  workflow_run: 
+    workflows: ["Fetch .apk"]
+    types:
+      - completed
+  
 jobs:
   build_zip:
     runs-on: ubuntu-latest
