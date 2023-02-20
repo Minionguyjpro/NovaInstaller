@@ -17,7 +17,7 @@ jobs:
         
       - name: Get file date
         run: |
-           filedate=$(date -r $GITHUB_WORKSPACE/system/priv-app/NovaLauncher/NovaLauncher.apk "+%m-%d-%Y %H:%M:%S")
+           filedate=$(date -r $GITHUB_WORKSPACE/system/app/NovaLauncher/NovaLauncher.apk "+%m-%d-%Y %H:%M:%S")
            echo $filedate > ./info/last_apk_date.txt
            date +%s > ./info/last_fetch.txt
         
