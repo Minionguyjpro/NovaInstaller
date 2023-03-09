@@ -1,7 +1,7 @@
-id=novainstaller
+id=NovaInstaller
 name=NovaInstaller
 version=v1.1.0
-versionCode=1.1.0
+versionCode=110
 author=Minionguyjpro
-description=Installs the Nova Launcher to ``/system/app/`` on Android.
-updateJson=https://github.com/Minionguyjpro/NovaInstaller/blob/main/update.json
+description=Installs the Nova Launcher to '/system/app/' on Android.
+updateJson=https://raw.githubusercontent.com/Minionguyjpro/NovaInstaller/main/update.json
