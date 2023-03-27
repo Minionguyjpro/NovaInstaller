@@ -1,23 +1,22 @@
 name: Build ZIP file
 on:
+  push:
   pull_request:
-  workflow_run: 
-    workflows: 
-      - "Fetch .apk"
-    types:
-      - completed
   
 jobs:
+  fetch_apk:
+    uses: ./.github/workflows/fetch.yml
   build_zip:
     runs-on: ubuntu-latest
     steps:
+      
       - name: Clone repository
         uses: actions/checkout@v3
       
       - name: Display repository information
         run: |
-          echo GitHub Ref. Name: $GITHUB_REF_NAME
-          echo GitHub Base Ref: $GITHUB_BASE_REF
+          echo GitHub Ref. Name = $GITHUB_REF_NAME
+          echo GitHub Base Ref. = $GITHUB_BASE_REF
       
       - name: Create stable ZIP archive
         run: zip -r "$GITHUB_WORKSPACE/NovaInstaller.zip" ./* -x update.json
