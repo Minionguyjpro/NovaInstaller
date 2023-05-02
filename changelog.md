@@ -1,11 +1,14 @@
 # NovaInstaller Changelog
 ## v1.1.1
+* Migrate to Magisk module by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/10
 * Add exclusion for ``update.json`` file in ``build.yml`` workflow by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/11
 * Fetch changes in ``build.yml`` and ``fetch.yml`` by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/12
 * Update fetch.yml by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/13
 * Rename update.json to module.json by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/14
 * Add Module Changes by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/15
 * Add exclusion for ``module.json``File in ``build.yml`` Workflow and Remove ``update.json`` by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/16
+* Create changelog.md by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/17
+* Forgot to Add 'main' Branch to Changelog URL by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/18
 
 
 **Full Changelog**: https://github.com/Minionguyjpro/NovaInstaller/compare/v1.1.0...v1.1.1
