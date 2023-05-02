@@ -1,7 +1,7 @@
 id=NovaInstaller
 name=NovaInstaller
-version=v1.1.0
-versionCode=110
+version=v1.1.1
+versionCode=111
 author=Minionguyjpro
 description=Installs the Nova Launcher to '/system/app/' on Android.
 updateJson=https://raw.githubusercontent.com/Minionguyjpro/NovaInstaller/main/module.json
