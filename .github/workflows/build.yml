@@ -19,12 +19,12 @@ jobs:
           echo GitHub Base Ref. = $GITHUB_BASE_REF
       
       - name: Create stable ZIP archive
-        run: zip -r "$GITHUB_WORKSPACE/NovaInstaller.zip" ./* -x update.json
+        run: zip -r "$GITHUB_WORKSPACE/NovaInstaller.zip" ./* -x module.json
         shell: bash
         if: github.ref_name == 'main'
         
       - name: Create nightly ZIP archive
-        run: zip -r "$GITHUB_WORKSPACE/NovaInstaller-nightly.zip" ./* -x update.json
+        run: zip -r "$GITHUB_WORKSPACE/NovaInstaller-nightly.zip" ./* -x module.json
         shell: bash
         if: |
           github.ref_name == 'dev' ||
