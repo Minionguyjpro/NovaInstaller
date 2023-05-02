@@ -4,4 +4,4 @@ version=v1.1.0
 versionCode=110
 author=Minionguyjpro
 description=Installs the Nova Launcher to '/system/app/' on Android.
-updateJson=https://raw.githubusercontent.com/Minionguyjpro/NovaInstaller/main/update.json
+updateJson=https://raw.githubusercontent.com/Minionguyjpro/NovaInstaller/main/module.json
