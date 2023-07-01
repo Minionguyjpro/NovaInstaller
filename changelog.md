@@ -1,4 +1,14 @@
 # NovaInstaller Changelog
+## v1.1.2
+* Fix No Integer and Explicit String in module.json by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/21
+* Migrate Fetch File Workaround to Allow Empty Commit by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/22
+* Update License to Apache License 2.0 by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/23
+* Update README.md by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/24
+* Auto Set Version in config.sh by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/25
+* Bump version to v1.1.2 by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/26
+
+
+**Full Changelog**: https://github.com/Minionguyjpro/NovaInstaller/compare/v1.1.1...v1.1.2
 ## v1.1.1
 * Migrate to Magisk module by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/10
 * Add exclusion for ``update.json`` file in ``build.yml`` workflow by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/11
