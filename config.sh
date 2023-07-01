@@ -30,7 +30,7 @@ print_modname() {
   ui_print "        Nova Launcher (Custom Home/Start Menu)        "
   ui_print "                                                      "
   ui_print "                    Easy Installer                    "
-  ui_print "========================v1.1.0========================"
+  ui_print "========================MODVER========================"
   ui_print " "
   ui_print " "
   ui_print "-------------Installing Nova Launcher....-------------"
