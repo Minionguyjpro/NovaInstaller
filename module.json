@@ -1,6 +1,6 @@
 {
-    "version": v1.1.0,
-    "versionCode": 1.1.0,
+    "version": "v1.1.1",
+    "versionCode": 111,
     "zipUrl": "https://github.com/Minionguyjpro/NovaInstaller/releases/latest/download/NovaInstaller.zip",
     "changelog": "https://raw.githubusercontent.com/Minionguyjpro/NovaInstaller/main/changelog.md"
 }
