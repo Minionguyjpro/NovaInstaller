@@ -17,10 +17,18 @@ jobs:
         run: |
           echo GitHub Ref. Name = $GITHUB_REF_NAME
           echo GitHub Base Ref. = $GITHUB_BASE_REF
+      
       - name: Set version in config.sh
         run: |
           MODVER=$(grep -Eo 'v[0-9]\.[0-9]\.[0-9]+' $GITHUB_WORKSPACE/module.json)
-          sed -i -e "s/MODVER/$MODVER/g" $GITHUB_WORKSPACE/config.sh
+          sed -i -e "s/\bMODVER\b/$MODVER/g" $GITHUB_WORKSPACE/config.sh
+          
+      - name: Set version in module.prop
+        run: |
+          VER=$(grep -Eo 'v[0-9]\.[0-9]\.[0-9]+' $GITHUB_WORKSPACE/module.json)
+          VERCODE=$(grep -Eo '[0-9][0-9][0-9]+' $GITHUB_WORKSPACE/module.json)
+          sed -i -e "s/\bVER\b/$VER/g" $GITHUB_WORKSPACE/module.prop
+          sed -i -e "s/\bVERCODE\b/$VERCODE/g" $GITHUB_WORKSPACE/module.prop
       
       - name: Create stable ZIP archive
         run: zip -r "$GITHUB_WORKSPACE/NovaInstaller.zip" ./* -x module.json
