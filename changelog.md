@@ -1,4 +1,10 @@
 # NovaInstaller Changelog
+## v1.1.3
+* Update build.yml to Auto-Set Version in module.prop by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/27
+* Fix version, update looped due to wrong version number in v1.1.2 being set to v1.1.3 by @Minionguyjpro
+
+
+**Full Changelog**: https://github.com/Minionguyjpro/NovaInstaller/compare/v1.1.2...v1.1.3
 ## v1.1.2
 * Fix No Integer and Explicit String in module.json by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/21
 * Migrate Fetch File Workaround to Allow Empty Commit by @Minionguyjpro in https://github.com/Minionguyjpro/NovaInstaller/pull/22
